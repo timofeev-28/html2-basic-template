@@ -1,1 +1,17 @@
-/* здесь используйте глобальные переменные */
+:root {
+	// fonts
+	--main-font: "Montserrat", system-ui, sans-serif;
+
+	// colors
+	--color-white: #ffffff;
+	--color-main: #333333;
+	--color-bgc: var(--color-white );
+
+	--color-accent: #4cfd3c;
+	--color-active: #18aa1f;
+	--color-border: #6aaa04;
+	--color-social: #62bdfd;
+
+	// sizes
+	--main-size: 16px;
+}

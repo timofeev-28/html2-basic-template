@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="header page__container">
+      <div class="header__logo logo">
+        <a class="logo__link" aria-current="page">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-sprite.svg#logo-desktop">
+            <source media="(min-width: 768px)" srcset="img/logo-sprite.svg#logo-tablet">
+            <img class="link-logo__img" src="img/logo-sprite.svg#logo-mobile" width="32" height="36" alt="Логотип интернет-магазина кофейных напитков Drink Go.">
+          </picture>
+          <span class="logo__text">Интернет-магазин кофейных напитков</span>
+        </a>
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Каталог</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Доставка</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <script src="js/script.js" defer></script>
   </body>
