@@ -1,1 +1,3 @@
-/* в этот файл добавляет скрипты*/
+import { initBurger } from "./burger.js";
+
+initBurger()

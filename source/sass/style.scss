@@ -1,7 +1,13 @@
 /* GLOBAL */
+@import "mixins";
 @import "global/variables";
 @import "global/global";
 @import "global/fonts";
 
 /* BLOCKS */
 @import "blocks/header";
+@import "blocks/logo";
+@import "blocks/navigation";
+@import "blocks/user-menu";
+@import "blocks/burger";
+@import "blocks/hero";

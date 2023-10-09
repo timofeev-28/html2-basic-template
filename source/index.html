@@ -2,40 +2,58 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink Go - магазин кофейных напитков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header page__container">
-      <div class="header__logo logo">
-        <a class="logo__link" aria-current="page">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-sprite.svg#logo-desktop">
-            <source media="(min-width: 768px)" srcset="img/logo-sprite.svg#logo-tablet">
-            <img class="link-logo__img" src="img/logo-sprite.svg#logo-mobile" width="32" height="36" alt="Логотип интернет-магазина кофейных напитков Drink Go.">
-          </picture>
-          <span class="logo__text">Интернет-магазин кофейных напитков</span>
-        </a>
+    <header class="header" data-test="header">
+      <div class="header__container page__container">
+        <div class="header__logo logo">
+          <a class="logo__link" aria-current="page">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/logo-sprite.svg#logo-desktop">
+              <source media="(min-width: 768px)" srcset="images/logo-sprite.svg#logo-tablet">
+              <img class="logo__img" src="images/logo-sprite.svg#logo-mobile" width="32" height="36" alt="Логотип интернет-магазина кофейных напитков Drink Go.">
+            </picture>
+            <span class="logo__text">Интернет-магазин кофейных напитков</span>
+          </a>
+        </div>
+        <nav class="navigation">
+          <ul class="navigation__list list-reset">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Каталог</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Доставка</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">О нас</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <a class="user-menu__link user-menu__link--entrance" href="javascript:undefined" aria-label="Войти">
+            <span class="user-menu__text">Войти</span>
+          </a>
+          <a class="user-menu__link user-menu__link--basket" href="javascript:undefined" aria-label="Корзина">
+            <span class="user-menu__text">Корзина</span>
+          </a>
+          <button class="header__burger burger btn-reset js-toggle-button">
+            <span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
+          </button>
+        </div>
       </div>
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Каталог</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Доставка</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">О нас</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <script src="js/script.js" defer></script>
+    </header>
+    <main>
+      <section class="hero">
+      </section>
+    </main>
+    <footer class="footer">It is footer</footer>
+    <script src="js/script.js" type="module" defer></script>
   </body>
 </html>

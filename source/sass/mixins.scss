@@ -1,0 +1,12 @@
+// для брейкпойнтов
+@mixin desktop {
+  @media (min-width: (1440px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: (768px)) {
+    @content;
+  }
+}

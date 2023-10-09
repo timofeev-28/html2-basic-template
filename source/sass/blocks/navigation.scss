@@ -1,0 +1,38 @@
+.navigation {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  // min-height: 50vh;
+  visibility: hidden;
+  background-color: var(--color-white);
+	transform: translateY(-120%);
+	transition: visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.navigation--active {
+  visibility: visible;
+  transform: none;
+  transition: visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.navigation__link {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 19px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-main);
+  border-bottom: 1px solid var(--bgc-active);
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    background-color: var(--bgc-active);
+  }
+}
