@@ -10,3 +10,37 @@
     @content;
   }
 }
+
+// ХОВЕР-ЭФФЕКТЫ
+@mixin not-focus {
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin focus-visible {
+  &:focus-visible {
+    @content;
+  }
+}
+
+// HOVER для моб.устройств
+@mixin any-hover {
+	@media (any-hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active {
+    @content;
+  }
+}

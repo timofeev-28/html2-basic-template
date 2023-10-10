@@ -4,17 +4,39 @@
   right: 0;
   left: 0;
   z-index: 2;
-  // min-height: 50vh;
+  min-height: 228px;
   visibility: hidden;
   background-color: var(--color-white);
 	transform: translateY(-120%);
 	transition: visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+  @include tablet {
+    position: initial;
+    z-index: 0;
+    min-height: auto;
+    visibility: visible;
+    transform: none;
+  }
 }
 
 .navigation--active {
   visibility: visible;
   transform: none;
   transition: visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.navigation__list {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    transform: translateX(4px);
+  }
+
+  @include desktop {
+    gap: 20px;
+    transform: translateX(1px);
+  }
 }
 
 .navigation__link {
@@ -31,6 +53,30 @@
   color: var(--color-main);
   border-bottom: 1px solid var(--bgc-active);
   -webkit-tap-highlight-color: transparent;
+  transition: color 0.25s ease-in-out;
+
+  @include tablet {
+    padding-top: 32px;
+    padding-right: 21px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    border-bottom: 2px solid transparent;
+
+    &.current-page {
+      color: var(--color-border-current);
+      border-bottom: 2px solid var(--color-border-current);
+    }
+
+    @include not-focus;
+
+    @include focus-visible {
+      color: var(--color-border-current);
+    }
+
+    @include any-hover {
+      color: var(--color-border-current);
+    }
+  }
 
   &:active {
     background-color: var(--bgc-active);

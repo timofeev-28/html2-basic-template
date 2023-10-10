@@ -36,6 +36,11 @@ img {
   @include tablet {
     width: 768px;
   }
+
+  @include desktop {
+    width: 1440px;
+    padding-inline: 40px;
+  }
 }
 
 .visually-hidden {

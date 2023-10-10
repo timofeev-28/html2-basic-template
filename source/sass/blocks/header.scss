@@ -1,7 +1,5 @@
 .header {
   position: relative;
-  // outline: 1px solid var(--bgc-active);
-  // outline-offset: -1px;
 
   &::before {
     content: "";
@@ -14,12 +12,23 @@
     background-color: var(--color-white);
     outline: 1px solid var(--bgc-active);
   }
+
+  @include tablet {
+    &::before {
+      content: none;
+    }
+  }
 }
 
 .header__container {
   display: flex;
   align-items: center;
   min-height: 60px;
+
+  @include tablet {
+    justify-content: space-between;
+    min-height: 80px;
+  }
 }
 
 .header__logo {
@@ -27,4 +36,14 @@
   flex-shrink: 0;
   margin-right: auto;
   z-index: 3;
+
+  @include tablet {
+    z-index: 0;
+    margin-right: 0;
+    padding-right: 20px;
+  }
+
+  @include desktop {
+    padding-right: 30px;
+  }
 }

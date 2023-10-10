@@ -1,12 +1,33 @@
 .logo__link {
   display: block;
+
+  @include desktop {
+    display: flex;
+  }
 }
 
 .logo__img {
   display: block;
   object-fit: cover;
+
+  @include tablet {
+    width: 82px;
+    height: 37px;
+  }
+
+  @include desktop {
+    margin-right: 20px;
+    width: 170px;
+  }
 }
 
 .logo__text {
   display: none;
+
+  @include desktop {
+    display: inline-block;
+    padding-top: 2px;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
