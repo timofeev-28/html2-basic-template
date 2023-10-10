@@ -1,17 +1,17 @@
 .page {
-	block-size: 100%;
-	font-family: var(--main-font);
-	font-size: var(--main-size);
-	font-weight: 400;
-	color: var(--color-main);
-	background-color: var(--bgc);
-	scroll-behavior: smooth;
+  block-size: 100%;
+  font-family: var(--main-font);
+  font-size: var(--main-size);
+  font-weight: 400;
+  color: var(--color-main);
+  background-color: var(--bgc);
+  scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
@@ -21,11 +21,11 @@ img {
 }
 
 .page__body {
-	margin: 0;
-	min-inline-size: 320px;
-	min-block-size: 100vh;
+  margin: 0;
+  min-inline-size: 320px;
+  min-block-size: 100vh;
   display: grid;
-	grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 .page__container {
@@ -44,31 +44,30 @@ img {
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .btn-reset {
-	// padding: 0;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .list-reset {
-	list-style: none;
-	margin-block: 0;
-	padding-left: 0;
+  list-style: none;
+  margin-block: 0;
+  padding-left: 0;
 }
 
 .stop-scroll {
-	overflow: hidden;
+  overflow: hidden;
 }

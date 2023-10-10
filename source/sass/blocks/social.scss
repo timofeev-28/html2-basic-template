@@ -1,0 +1,94 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social__logo-wrap {
+  padding-right: 15px;
+}
+
+.social__logo-link {
+  display: block;
+}
+
+.social__logo-img {
+  display: block;
+}
+
+.social__logo-text {
+  display: none;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.25s ease-in-out;
+
+  @include not-focus;
+
+  @include focus-visible {
+    background-color: var(--bgc-active);
+  }
+
+  @include any-hover {
+    background-color: var(--bgc-active);
+  }
+
+  @include active {
+    background-color: var(--color-bgc-active);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--color-social);
+    mask: var(--bgi) no-repeat center / var(--bgs);
+    transition: background-color 0.25s ease-in-out;
+  }
+
+  &--vk::before {
+    --bgi: url("../../images/icons/stack.svg#social-vk");
+    --bgs: 20px 20px;
+  }
+
+  &--pinterest::before {
+    --bgi: url("../../images/icons/stack.svg#social-pinterest");
+    --bgs: 22px 22px;
+  }
+
+  &--ok::before {
+    --bgi: url("../../images/icons/stack.svg#social-ok");
+    --bgs: 20px 20px;
+  }
+
+  @include focus-visible {
+    &:focus-visible::before {
+      background-color: var(--color-border-current);
+    }
+  }
+
+  @include any-hover {
+    &:hover::before {
+      background-color: var(--color-border-current);
+    }
+  }
+
+  @include active {
+    &:active::before {
+      background-color: var(--color-border-current);
+    }
+  }
+}

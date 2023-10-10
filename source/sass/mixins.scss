@@ -26,11 +26,11 @@
 
 // HOVER для моб.устройств
 @mixin any-hover {
-	@media (any-hover: hover) {
-		&:hover {
-			@content;
-		}
-	}
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
 }
 
 @mixin hover {

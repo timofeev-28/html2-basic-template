@@ -7,8 +7,8 @@
   min-height: 228px;
   visibility: hidden;
   background-color: var(--color-white);
-	transform: translateY(-120%);
-	transition: visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateY(-120%);
+  transition: visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
 
   @include tablet {
     position: initial;
@@ -39,10 +39,19 @@
   }
 }
 
+.navigation__item {
+  border-bottom: 1px solid var(--bgc-active);
+
+  @include tablet {
+    border-bottom: none;
+  }
+}
+
 .navigation__link {
   display: block;
-  padding-top: 21px;
-  padding-bottom: 19px;
+  max-width: 280px;
+  margin-inline: auto;
+  padding: 21px 20px 19px 20px;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -51,15 +60,11 @@
   text-align: center;
   text-decoration: none;
   color: var(--color-main);
-  border-bottom: 1px solid var(--bgc-active);
   -webkit-tap-highlight-color: transparent;
   transition: color 0.25s ease-in-out;
 
   @include tablet {
-    padding-top: 32px;
-    padding-right: 21px;
-    padding-bottom: 30px;
-    padding-left: 20px;
+    padding: 32px 21px 30px 20px;
     border-bottom: 2px solid transparent;
 
     &.current-page {
