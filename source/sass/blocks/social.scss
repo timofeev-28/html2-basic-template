@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 21px;
 }
 
 .social__logo-wrap {
@@ -14,6 +15,7 @@
 
 .social__logo-img {
   display: block;
+  object-fit: initial;
 }
 
 .social__logo-text {

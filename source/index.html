@@ -51,7 +51,7 @@
     <main>
     </main>
     <footer class="footer page__container" data-test="footer">
-      <section class="footer__section social">
+      <div class="footer__section social">
         <div class="social__logo-wrap">
           <a class="social__logo-link" aria-current="page" href="#header">
             <picture>
@@ -78,7 +78,7 @@
             </a>
           </li>
         </ul>
-      </section>
+      </div>
       <section class="footer__section footer__section--shop">
         <h2 class="footer__title">Интернет-магазин</h2>
         <ul class="footer__list list-reset">
@@ -111,14 +111,14 @@
         </ul>
       </section>
       <section class="footer__section footer__section--contacts">
-        <h2 class="footer__title">Контакты</h2>
+        <h2 class="footer__title footer__title--contacts">Контакты</h2>
         <address class="address">
-          <p class="address__address">Санкт-Петербург, набережная&nbsp;реки Карповки,&nbsp;д.&nbsp;5</p>
-          <a class="address__link-phone" href="tel:+79999999999">+7&nbsp;(999)&nbsp;999-99-99</a>
+          <p class="address__address address__icon address__icon--address">Санкт-Петербург, набережная реки Карповки,&nbsp;дом&nbsp;5</p>
+          <a class="address__link-phone address__icon address__icon--phone" href="tel:+79999999999">+7&nbsp;(999)&nbsp;999-99-99</a>
         </address>
       </section>
       <div class="footer__developer">
-        <p class="footer__developer-text">Разработано в HTML Academy</p>
+        <p class="footer__developer-text">Разработано в <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a></p>
       </div>
     </footer>
     <script src="js/script.js" type="module"></script>

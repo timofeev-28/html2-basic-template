@@ -5,6 +5,7 @@
 .footer__section {
   position: relative;
   padding-block: 20px;
+  padding-bottom: 30px;
 
   &::after {
     content: "";
@@ -16,16 +17,24 @@
     height: 1px;
     background-color: var(--bgc-active);
   }
+
+  &--contacts {
+    padding-bottom: 21px;
+  }
 }
 
 .footer__title {
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.28px;
   color: var(--color-border-current);
+
+  &--contacts {
+    margin-bottom: 19px;
+  }
 }
 
 .footer__link {
@@ -36,8 +45,87 @@
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.25s ease-in-out;
+
+  @include not-focus;
+
+  @include focus-visible {
+    color: var(--color-accent);
+  }
+
+  @include any-hover {
+    color: var(--color-accent);
+  }
+
+  @include active {
+    color: var(--color-active);
+  }
 }
 
 .footer__item:not(:last-child) {
-  margin-bottom: 4px;
+  margin-bottom: 17px;
+}
+
+.footer__developer-text {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  color: #bdbdbd;
+}
+
+.footer__developer-link {
+  position: relative;
+  padding-right: 16px;
+  text-decoration: none;
+  color: currentColor;
+  transition: color 0.25s ease-in-out;
+
+  @include not-focus;
+
+  @include focus-visible {
+    color: var(--color-border-current);
+  }
+
+  @include any-hover {
+    color: var(--color-border-current);
+  }
+
+  @include active {
+    color: var(--color-active);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 16px;
+    background-color: #bdbdbd;
+    mask: url("../../images/icons/stack.svg#logo-academy") no-repeat center / 12px 16px;
+    transition: background-color 0.25s ease-in-out;
+  }
+
+  @include focus-visible {
+    &:focus-visible::after {
+      background-color: var(--color-border-current);
+    }
+  }
+
+  @include any-hover {
+    &:hover::after {
+      background-color: var(--color-border-current);
+    }
+  }
+
+  @include active {
+    &:active::after {
+      background-color: var(--color-active);
+    }
+  }
 }
