@@ -71,3 +71,13 @@ img {
 .stop-scroll {
   overflow: hidden;
 }
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  color: var(--color-border-current);
+}

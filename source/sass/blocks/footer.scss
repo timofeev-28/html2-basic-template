@@ -1,5 +1,14 @@
 .footer {
   display: grid;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .footer__section {
@@ -16,10 +25,63 @@
     width: 100vw;
     height: 1px;
     background-color: var(--bgc-active);
+
+    @include tablet {
+      content: none;
+    }
   }
 
   &--contacts {
     padding-bottom: 21px;
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 21px;
+
+  @include tablet {
+    grid-column: 3 span;
+  }
+
+  @include desktop {
+    grid-column: 1 span;
+    flex-direction: column;
+    align-items: initial;
+  }
+}
+
+.footer__social__logo-wrap {
+  padding-right: 15px;
+
+  @include desktop {
+    padding-right: 0;
+  }
+}
+
+.footer__social__logo-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__social__logo-img {
+  display: block;
+  object-fit: initial;
+
+  @include tablet {
+    width: 170px;
+    height: 36px;
+  }
+}
+
+.footer__social__logo-text {
+  display: none;
+
+  @include desktop {
+    display: block;
   }
 }
 
@@ -66,6 +128,17 @@
 .footer__item:not(:last-child) {
   margin-bottom: 17px;
 }
+
+.footer__developer {
+  @include tablet {
+    grid-column: 3 span;
+  }
+
+  @include desktop {
+    grid-column: 4 span;
+  }
+}
+
 
 .footer__developer-text {
   margin: 0;

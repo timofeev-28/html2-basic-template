@@ -1,0 +1,134 @@
+.slider {
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider__image-wrap {
+  padding-bottom: 6px;
+  min-height: 286px;
+}
+
+.slider__image {
+  display: block;
+}
+
+.slider__description-wrap {
+  text-align: center;
+}
+
+.slider__badge {
+  margin-bottom: 5px;
+}
+
+.slider__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.72px;
+}
+
+.slider__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.slider__old-price {
+  margin-right: 2px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-decoration: line-through;
+  color: var(--color-border-current);
+}
+
+.slider__price {
+  margin-right: 17px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.slider__button {
+  padding: 5px 8px;
+  padding-top: 7px;
+  width: 113px;
+  min-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.72px;
+  border-radius: 4px;
+  color: var(--color-white);
+  background-color: var(--color-border-current);
+
+  @include tablet {
+    width: auto;
+    min-width: 113px;
+    max-width: 226px;
+  }
+
+  @include not-focus;
+
+  @include focus-visible {
+    background-color: var(--color-accent);
+  }
+
+  @include any-hover {
+    color: var(--color-accent);
+  }
+
+  @include active {
+    color: var(--color-active);
+  }
+
+  @include disabled {
+    background-color: var(--color-social);
+  }
+}
+
+.slider__button-nav {
+  position: absolute;
+  top: 108px;
+  padding: 0;
+  width: 20px;
+  height: 400px;
+  font-size: 24px;
+  color: var(--color-border-current);
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.25s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 11px;
+    height: 20px;
+    background-color: var(--color-border-current);
+    mask: url("../../images/icons/stack.svg#arrow") no-repeat center / 11px 20px;
+  }
+
+  @include active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.slider-button-prev {
+  left: -20px;
+}
+
+.slider-button-next {
+  right: -20px;
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}

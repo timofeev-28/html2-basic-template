@@ -1,27 +1,3 @@
-.social {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 21px;
-}
-
-.social__logo-wrap {
-  padding-right: 15px;
-}
-
-.social__logo-link {
-  display: block;
-}
-
-.social__logo-img {
-  display: block;
-  object-fit: initial;
-}
-
-.social__logo-text {
-  display: none;
-}
-
 .social__list {
   display: flex;
   flex-wrap: wrap;

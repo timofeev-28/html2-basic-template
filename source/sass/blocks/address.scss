@@ -35,3 +35,21 @@
     --bgi: url("../../images/icons/stack.svg#phone");
   }
 }
+
+.address__link-phone {
+  transition: color 0.25s ease-in-out;
+
+  @include not-focus;
+
+  @include focus-visible {
+    color: var(--color-accent);
+  }
+
+  @include any-hover {
+    color: var(--color-accent);
+  }
+
+  @include active {
+    color: var(--color-active);
+  }
+}
