@@ -3,6 +3,7 @@ const slider = document.querySelector('.slider');
 const prevButton = document.querySelector('.slider-button-prev');
 const nextButton = document.querySelector('.slider-button-next');
 const slides = Array.from(slider.querySelectorAll('.slider__slide'));
+const paginationButttons = Array.from(document.querySelectorAll('.slider__button-pagination'));
 const slideCount = slides.length;
 let slideIndex = 0;
 
@@ -27,8 +28,10 @@ function updateSlider() {
   slides.forEach((slide, index) => {
     if (index === slideIndex) {
       slide.style.display = 'block';
+      paginationButttons[index].classList.add('button-pagination-current');
     } else {
       slide.style.display = 'none';
+      paginationButttons[index].classList.remove('button-pagination-current');
     }
   });
 }

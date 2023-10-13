@@ -1,0 +1,131 @@
+.features {
+  padding-top: 47px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  @include tablet {
+    padding-top: 57px;
+  }
+
+  @include desktop {
+    padding-top: 97px;
+    padding-bottom: 120px;
+  }
+}
+
+.features__badge {
+  margin-bottom: 5px;
+}
+
+.features__title {
+  margin-bottom: 35px;
+
+  @include tablet {
+    margin-bottom: 59px;
+  }
+
+  @include desktop {
+    margin-bottom: 80px;
+  }
+}
+
+.features__list {
+  display: grid;
+  row-gap: 32px;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+    padding-left: 10px;
+    text-align: start;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+.features__item {
+  position: relative;
+  padding-top: 66px;
+
+  @include tablet {
+    justify-self: start;
+    padding-top: 0;
+    padding-left: 72px;
+  }
+
+  @include desktop {
+    justify-self: center;
+    padding-top: 75px;
+    padding-left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52px;
+    height: 56px;
+    background: var(--bgi) no-repeat top left 1px / 50px 56px;
+
+    @include tablet {
+      left: 0;
+      transform: none;
+    }
+
+    @include desktop {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--speed {
+    --bgi: url("../../images/icons/stack.svg#speed");
+  }
+
+  &--fit {
+    --bgi: url("../../images/icons/stack.svg#fit");
+  }
+
+  &--energy {
+    --bgi: url("../../images/icons/stack.svg#energy");
+  }
+
+  &--ecology {
+    --bgi: url("../../images/icons/stack.svg#ecology");
+  }
+}
+
+.features__subtitle {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @include tablet {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.features__description {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

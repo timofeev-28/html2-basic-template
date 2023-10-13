@@ -21,11 +21,15 @@ img {
 }
 
 .page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   margin: 0;
   min-inline-size: 320px;
   min-block-size: 100vh;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+}
+
+.page__wrap {
+  overflow: hidden;
 }
 
 .page__container {
@@ -80,4 +84,16 @@ img {
   letter-spacing: 0.48px;
   text-transform: uppercase;
   color: var(--color-border-current);
+}
+
+.title {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+
+  @include tablet {
+    font-size: 42px;
+    line-height: 64px;
+  }
 }

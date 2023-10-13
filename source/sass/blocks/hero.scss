@@ -1,7 +1,19 @@
 .hero {
   padding-top: 20px;
   padding-bottom: 60px;
-  background-color: var(--color-bgc-slider);
+  background: var(--color-bgc-slider);
+
+  @include tablet {
+    padding-top: 57px;
+    padding-bottom: 0;
+    background: linear-gradient(to bottom, var(--color-bgc-slider) 77%, var(--color-transparent) 77%);
+  }
+
+  @include desktop {
+    padding-top: 30px;
+    padding-bottom: 84px;
+    background: var(--color-bgc-slider);
+  }
 }
 
 .hero__slider-container {
