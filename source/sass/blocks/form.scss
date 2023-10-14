@@ -1,0 +1,103 @@
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  border: none;
+}
+
+.form__fieldset:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.form__subtitle {
+  margin-bottom: 29px;
+  padding-inline: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+// настройки рендж-слайдера
+.form__slider {
+  margin-bottom: 36px;
+  height: 2px;
+  background: #e2e2e2;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.form__slider .noUi-connects {
+  border-radius: 0;
+  overflow: initial;
+}
+
+.form__slider .noUi-connect {
+  top: -1px;
+  height: 4px;
+  background: var(--color-accent);
+}
+
+.form__slider .noUi-handle {
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: default;
+  box-shadow: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 23px;
+  height: 23px;
+  right: -23px;
+  top: -10px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: var(--color-white);
+  left: 2px;
+  top: 2px;
+  transition: background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.noUi-handle {
+  @include not-focus;
+
+  @include focus-visible {
+    &:focus-visible::after,
+    &:focus-visible::before {
+      background: var(--color-border-current);
+      opacity: 0.25;
+    }
+  }
+
+  @include active {
+    &:active::after,
+    &:active::before {
+      background: var(--color-border-current);
+      opacity: 1;
+    }
+  }
+}
+// конец настроек рендж-слайдера;
+
+.form__range-input {
+  padding: 9px 10px 7px;
+  width: 118px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid var(--color-accent);
+
+  &--from {
+    margin-right: 39px;
+  }
+}
