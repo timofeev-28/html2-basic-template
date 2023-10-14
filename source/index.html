@@ -178,13 +178,14 @@
                 <legend class="form__subtitle">Цена</legend>
                 <div class="form__slider"></div>
                 <input class="form__range-input form__range-input--from" type="number" name="min-price" value="0" aria-label="Введите число от 0">
+                <span class="form__line"></span>
                 <input class="form__range-input  form__range-input--before" type="number" name="max-price" id="before" value="900" aria-label="Введите число не больше 900">
               </fieldset>
 
               <fieldset class="form__fieldset">
                 <legend class="form__subtitle form__subtitle--radio">Наличие молока</legend>
                 <ul class="form__list list-reset">
-                  <li class="form__item">
+                  <li class="form__item  form__item--radio">
                     <label class="form__label">
                       <input class="form__radio visually-hidden" type="radio" name="milk" value="not-important" checked>
                       <span class="form__mark-radio"></span>
@@ -218,32 +219,34 @@
               <fieldset class="form__fieldset">
                 <legend class="form__subtitle form__subtitle--checkbox">Страна произрастания</legend>
                 <ul class="form__list list-reset">
-                  <li class="form__item">
-                    <label class="form__label">
-                      <input class="form__check visually-hidden" type="checkbox" name="Brazil" checked>
-                      <span class="form__mark"></span>
-                      <span class="form__label-text">Бразилия</span>
+                  <li class="form__item form__item--country">
+                    <label class="form__label form__label--country">
+                      <input class="form__check" type="checkbox" name="origin-country" value="brazil" checked>
+                      <span class="form__label-text form__label-text--country">Бразилия</span>
                     </label>
                   </li>
-                  <li class="form__item">
-                    <label class="form__label">
-                      <input class="form__check visually-hidden" type="checkbox" name="Ethiopia" checked>
-                      <span class="form__mark"></span>
-                      <span class="form__label-text">Ethiopia</span>
+                  <li class="form__item form__item--country">
+                    <label class="form__label form__label--country">
+                      <input class="form__check" type="checkbox" name="origin-country" value="ethiopia">
+                      <span class="form__label-text form__label-text--country">Эфиопия</span>
                     </label>
                   </li>
-                  <li class="form__item">
-                      <label class="form__label">
-                      <input class="form__check visually-hidden" type="checkbox" name="Colombia">
-                      <span class="form__mark"></span>
-                      <span class="form__label-text">Colombia</span>
+                  <li class="form__item form__item--country">
+                      <label class="form__label form__label--country">
+                      <input class="form__check" type="checkbox" name="origin-country" value="colombia">
+                      <span class="form__label-text form__label-text--country">Колумбия</span>
                     </label>
                   </li>
-                  <li class="form__item">
-                    <label class="form__label">
-                      <input class="form__check visually-hidden" type="checkbox" name="Peru" disabled>
-                      <span class="form__mark"></span>
-                      <span class="form__label-text">Peru</span>
+                  <li class="form__item form__item--country">
+                    <label class="form__label form__label--country">
+                      <input class="form__check" type="checkbox" name="origin-country" disabled value="kosta rica">
+                      <span class="form__label-text form__label-text--country">Коста-Рика</span>
+                    </label>
+                  </li>
+                  <li class="form__item form__item--country">
+                    <label class="form__label form__label--country">
+                      <input class="form__check" type="checkbox" name="origin-country" disabled value="peru">
+                      <span class="form__label-text form__label-text--country">Перу</span>
                     </label>
                   </li>
                 </ul>

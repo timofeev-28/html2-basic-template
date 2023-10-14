@@ -15,6 +15,11 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+
+  &--checkbox {
+    margin-bottom: 19px;
+    padding-top: 3px;
+  }
 }
 
 // настройки рендж-слайдера
@@ -98,6 +103,203 @@
   border: 2px solid var(--color-accent);
 
   &--from {
-    margin-right: 39px;
+    margin-right: 14px;
   }
+
+  @include not-focus;
+
+  @include focus-visible {
+    border-color: var(--color-active);
+  }
+
+  @include disabled {
+    color: var(--color-social);
+    background-color: var(--catalog-bgc);
+    border-color: #e2e2e2;
+  }
+}
+
+.form__range-input::-webkit-outer-spin-button,
+.form__range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form__line {
+  display: inline-block;
+  margin-right: 13px;
+  width: 8px;
+  height: 2px;
+  background-color: var(--color-social);
+  transform: translateY(-3px);
+}
+
+// радиокнопки
+.form__subtitle--radio {
+  margin-bottom: 23px;
+}
+
+.form__item {
+  &--radio:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &--country:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__label {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+
+  &--country {
+    display: flex;
+    gap: 10px;
+    padding-left: 0;
+  }
+}
+
+.form__mark-radio {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-border-current);
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  }
+}
+
+.form__radio {
+  &:checked + .form__mark-radio::after {
+    background-color: var(--color-border-current);
+  }
+
+  @include not-focus;
+
+  @include focus-visible {
+    &:focus-visible + .form__mark-radio::after {
+      background-color: var(--color-border-current);
+      opacity: 0.25;
+    }
+  }
+
+  @include any-hover {
+    &:hover:not(:checked):not(:disabled) + .form__mark-radio::after {
+      background-color: var(--color-border-current);
+      opacity: 0.25;
+      cursor: pointer;
+    }
+  }
+
+  @include disabled {
+    &:disabled + .form__mark-radio,
+    &:disabled + .form__mark-radio::after {
+      border-color: var(--color-social);
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  @include disabled {
+    &:disabled ~ .form__label-text {
+      color: #cbcbcb;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// чекбоксы
+.form__check {
+  --checkbox-width: 42px;
+  --checkbox-height: 24px;
+  --bgc-color: var(--color-social);
+  position: relative;
+  appearance: none;
+  display: grid;
+  margin: 0;
+
+  &::before {
+    content: "";
+    width: var(--checkbox-width);
+    height: var(--checkbox-height);
+    border: var(--border, none);
+    border-radius: var(--checkbox-height);
+    background-color: var(--bgc-color);
+    grid-area: 1/1/2/2;
+    transition: border 0.15s ease-in-out;
+  }
+
+  &:checked::before {
+    --bgc-color: var(--color-border-current);
+  }
+
+  @include not-focus;
+
+  @include focus-visible {
+    &:focus-visible::before {
+      --border: 2px solid var(--color-accent);
+    }
+  }
+
+  @include hover {
+    &:hover:not(:disabled)::before {
+      --border: 2px solid var(--color-accent);
+    }
+  }
+
+  @include disabled {
+    &:disabled::before {
+      background-color: #e2e2e2;
+      cursor: not-allowed;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    background: var(--color-white);
+    grid-area: 1/1/2/2;
+    transition: 0.4s;
+  }
+
+  &:checked::after {
+    transform: translateX(18px);
+  }
+
+  @include disabled {
+    &:disabled::after {
+      background: var(--color-social);
+    }
+  }
+
+  @include disabled {
+    &:disabled + .form__label-text {
+      color: #c4c4c4;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.form__label-text--country {
+  transform: translateY(4px);
 }
