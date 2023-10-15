@@ -72,7 +72,6 @@
       border-bottom: 2px solid var(--color-border-current);
     }
 
-    @include not-focus;
 
     @include focus-visible {
       color: var(--color-border-current);

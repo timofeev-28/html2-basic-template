@@ -53,8 +53,6 @@
   @include tablet {
     min-height: 80px;
 
-    @include not-focus;
-
     @include focus-visible {
       &:focus-visible::before {
         background-color: var(--color-border-current);
@@ -71,8 +69,6 @@
   @include desktop {
     display: flex;
     align-items: center;
-
-    @include not-focus;
 
     @include focus-visible {
       color: var(--color-border-current);

@@ -136,6 +136,8 @@
   border-radius: 4px;
   color: var(--color-white);
   background-color: var(--color-border-current);
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 
   @include not-focus;
 
@@ -144,11 +146,11 @@
   }
 
   @include any-hover {
-    color: var(--color-accent);
+    background-color: var(--color-accent);
   }
 
   @include active {
-    color: var(--color-active);
+    background-color: var(--color-active);
   }
 
   @include disabled {
