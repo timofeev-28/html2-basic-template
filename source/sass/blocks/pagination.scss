@@ -1,0 +1,104 @@
+.pagination {
+  @include tablet {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  gap: 20px;
+}
+
+.pagination__link {
+  display: block;
+  min-width: 40px;
+  height: 40px;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--color-border-current, #7859cf);
+  background-color: var(--color-white, #ffffff);
+  border-radius: 4px;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+
+  &--prev::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-border-current, #7859cf);
+    mask: url("../../images/icons/stack.svg#pagination-arrow") no-repeat center / 10px 6px;
+    transition: background-color 0.25s ease-in-out;
+
+    @include tablet {
+      content: none;
+    }
+  }
+
+  &--next::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-border-current, #7859cf);
+    mask: url("../../images/icons/stack.svg#pagination-arrow") no-repeat center / 10px 6px;
+    transform: rotate(180deg);
+    transition: background-color 0.25s ease-in-out;
+
+    @include tablet {
+      content: none;
+    }
+  }
+
+  &:focus-visible::after,
+  &:hover::after,
+  &:active::after {
+    background-color: var(--color-white, #ffffff);
+  }
+
+  &:disabled::after {
+    background-color: var(--color-white, #ffffff);
+  }
+
+  &--current {
+    color: inherit;
+    background-color: var(--color-transparent, rgba(0, 0, 0, 0));
+  }
+
+  @include not-focus;
+
+  @include focus-visible {
+    color: var(--color-white, #ffffff);
+    background-color: var(--color-accent, #9070ec);
+  }
+
+  @include any-hover {
+    color: var(--color-white, #ffffff);
+    background-color: var(--color-accent, #9070ec);
+  }
+
+  @include active {
+    color: var(--color-white, #ffffff);
+    background-color: var(--color-active, #593cac);
+  }
+
+  @include disabled {
+    background-color: #e2e2e2;
+    cursor: not-allowed;
+  }
+}
+
+.pagination__text {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+    padding-top: 2px;
+    padding-inline: 12px;
+    text-align: center;
+    font-family: var(--main-font);
+  }
+}

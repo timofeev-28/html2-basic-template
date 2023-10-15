@@ -1,0 +1,123 @@
+.products {
+  margin-bottom: 40px;
+
+  @include tablet {
+    padding-top: 13px;
+    margin-bottom: 68px;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+.products__list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 27px;
+    row-gap: 29px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.products__item {
+  padding: 43px 19px 20px;
+  text-align: left;
+  background-color: var(--color-white, #ffffff);
+
+  @include tablet {
+    padding: 50px 31px 30px;
+  }
+}
+
+.products__img-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.products__image {
+  display: block;
+}
+
+.products__title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @include tablet {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.products__description {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include tablet {
+    margin-bottom: 21px;
+  }
+}
+
+.products__price {
+  display: inline-block;
+  margin-right: 46px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+
+  @include tablet {
+    margin-right: 93px;
+  }
+
+  @include desktop {
+    margin-right: 61px;
+  }
+}
+
+.products__button-basket {
+  padding: 4px 20px;
+  padding-left: 41px;
+  width: 141px;
+  min-height: 36px;
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-white, #ffffff);
+  background: url("../../images/icons/stack.svg#btn-basket") no-repeat left 19px center / 20px 16px;
+  background-color: var(--color-border-current, #7859cf);
+  border-radius: 4px;
+  transition: background-color 0.25s ease-in-out;
+
+  @include not-focus;
+
+  @include focus-visible {
+    background-color: var(--color-accent, #9070ec);
+  }
+
+  @include hover {
+    background-color: var(--color-accent, #9070ec);
+  }
+
+  @include active {
+    background-color: var(--color-active, #593cac);
+  }
+}

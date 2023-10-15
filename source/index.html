@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/MontserratRegular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/MontserratMedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/MontserratSemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/MontserratBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
   <body class="page__body">
     <div class="page__wrap">
@@ -169,7 +175,7 @@
         </section>
 
         <section class="catalog" data-test="catalog">
-           <div class="catalog__container page__container">
+          <div class="catalog__container page__container">
             <span class="catalog__badge badge">Каталог</span>
             <h2 class="catalog__title title">Каталог кофейных напитков</h2>
 
@@ -252,24 +258,30 @@
                 </ul>
               </fieldset>
 
-              <button class="form__button btn-reset" type="submit">Применить</button>
-              <button class="form__buttom form__button--reset" type="reset">Сбросить</button>
+              <div class="form__button-wrap">
+                <button class="form__button btn-reset" type="submit">Применить</button>
+                <button class="form__button form__button--reset btn-reset" type="reset">Сбросить</button>
+              </div>
             </form>
 
             <div class="catalog__sorting">
               <p class="catalog__sorting-title">Сортировка:</p>
-              <select class="catalog__sorting-select" name="select">
-                <option value="по умолчанию">по умолчанию</option>
-              </select>
+              <div class="catalog__sorting-select-wrap">
+                <select class="catalog__sorting-select" name="select">
+                  <option value="по умолчанию">по умолчанию</option>
+                  <option value="сначала дешёвые">сначала дешёвые</option>
+                  <option value="сначала дорогие">сначала дорогие</option>
+                </select>
+                <span class="catalog__sorting-arrow"></span>
+              </div>
             </div>
-
             <div class="catalog__products products">
               <ul class="products__list list-reset">
                 <li class="products__item">
                   <div class="products__img-wrap">
                     <picture>
                       <source type="image/webp" srcset="images/catalog-coffee-1@1x.webp 1x, images/catalog-coffee-1@2x.webp 2x">
-                      <img class="slider__image" src="images/catalog-coffee-1@1x.png" srcset="images/catalog-coffee-1@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <img class="products__image" src="images/catalog-coffee-1@1x.png" srcset="images/catalog-coffee-1@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="products__title">Декаф Флэт Уайт</h3>
@@ -281,7 +293,7 @@
                   <div class="products__img-wrap">
                     <picture>
                       <source type="image/webp" srcset="images/catalog-coffee-2@1x.webp 1x, images/catalog-coffee-2@2x.webp 2x">
-                      <img class="slider__image" src="images/catalog-coffee-2@1x.png" srcset="images/catalog-coffee-2@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <img class="products__image" src="images/catalog-coffee-2@1x.png" srcset="images/catalog-coffee-2@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="products__title">Декаф Флэт Уайт</h3>
@@ -293,7 +305,7 @@
                   <div class="products__img-wrap">
                     <picture>
                       <source type="image/webp" srcset="images/catalog-coffee-3@1x.webp 1x, images/catalog-coffee-3@2x.webp 2x">
-                      <img class="slider__image" src="images/catalog-coffee-3@1x.png" srcset="images/catalog-coffee-3@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <img class="products__image" src="images/catalog-coffee-3@1x.png" srcset="images/catalog-coffee-3@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="products__title">Декаф Флэт Уайт</h3>
@@ -305,7 +317,7 @@
                   <div class="products__img-wrap">
                     <picture>
                       <source type="image/webp" srcset="images/catalog-coffee-4@1x.webp 1x, images/catalog-coffee-4@2x.webp 2x">
-                      <img class="slider__image" src="images/catalog-coffee-4@1x.png" srcset="images/catalog-coffee-4@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <img class="products__image" src="images/catalog-coffee-4@1x.png" srcset="images/catalog-coffee-4@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="products__title">Декаф Флэт Уайт</h3>
@@ -317,7 +329,7 @@
                   <div class="products__img-wrap">
                     <picture>
                       <source type="image/webp" srcset="images/catalog-coffee-5@1x.webp 1x, images/catalog-coffee-5@2x.webp 2x">
-                      <img class="slider__image" src="images/catalog-coffee-5@1x.png" srcset="images/catalog-coffee-5@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <img class="products__image" src="images/catalog-coffee-5@1x.png" srcset="images/catalog-coffee-5@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="products__title">Декаф Флэт Уайт</h3>
@@ -329,7 +341,7 @@
                   <div class="products__img-wrap">
                     <picture>
                       <source type="image/webp" srcset="images/catalog-coffee-6@1x.webp 1x, images/catalog-coffee-6@2x.webp 2x">
-                      <img class="slider__image" src="images/catalog-coffee-6@1x.png" srcset="images/catalog-coffee-6@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <img class="products__image" src="images/catalog-coffee-6@1x.png" srcset="images/catalog-coffee-6@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="products__title">Декаф Флэт Уайт</h3>
@@ -340,10 +352,47 @@
               </ul>
             </div>
 
-           </div>
+            <div class="catalog__pagination pagination">
+              <ul class="pagination__list list-reset">
+                <li class="pagination__item">
+                  <a class="pagination__link pagination__link--prev" href="javascript:unefined">
+                    <span class="pagination__text">Назад</span>
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="javascript:unefined">1
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link pagination__link--current">2
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="javascript:unefined">3
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link pagination__link--next" href="javascript:unefined">
+                    <span class="pagination__text">Вперёд</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section class="map" data-test="map">
+          <h2 class="visually-hidden">Магазин на карте.</h2>
+          <div class="map__container">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
+              <img class="map__image" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="420" alt="Магазин на карте.">
+            </picture>
+          </div>
         </section>
       </main>
 

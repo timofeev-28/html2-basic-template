@@ -2,16 +2,123 @@
   padding-top: 47px;
   padding-bottom: 44px;
   background-color: var(--catalog-bgc);
+
+  @include tablet {
+    padding-top: 77px;
+    padding-bottom: 90px;
+  }
+
+  @include desktop {
+    padding-top: 98px;
+    padding-bottom: 120px;
+  }
 }
 
 .catalog__container {
   text-align: center;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
+  }
 }
 
 .catalog__badge {
   margin-bottom: 5px;
+
+  @include desktop {
+    grid-column: 1 / -1;
+  }
 }
 
 .catalog__title {
   margin-bottom: 20px;
+
+  @include desktop {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    margin-bottom: 42px;
+  }
+}
+
+.catalog__sorting {
+  display: flex;
+  justify-content: space-between;
+
+  @include desktop {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-content: end;
+  }
+}
+
+.catalog__sorting-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+
+  @include desktop {
+    margin-right: 20px;
+  }
+}
+
+.catalog__sorting-select-wrap {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.catalog__sorting-arrow {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 6px;
+  transition: transform 0.3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 6px;
+    background-color: var(--color-border-current, #7859cf);
+    mask: url("../../images/icons/stack.svg#sort-arrow") no-repeat center / 10px 6px;
+  }
+}
+
+.catalog__sorting-select {
+  padding-right: 19px;
+  padding-left: 4px;
+  width: 155px;
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  appearance: none;
+  color: var(--color-border-current, #7859cf);
+  background-color: var(--color-transparent);
+  border: 0;
+  border-radius: 3px;
+  transition: background-color 0.25s ease-in-out;
+
+  @include not-focus;
+
+  @include focus-visible {
+    background-color: var(--bgc-active, #f0ebff);
+  }
+
+  @include hover {
+    background-color: var(--bgc-active, #f0ebff);
+  }
+
+  @include active {
+    &:active + .catalog__sorting-arrow {
+      transform: rotate(180deg);
+      transform-origin: center 25%;
+    }
+  }
 }

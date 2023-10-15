@@ -34,7 +34,6 @@
   @include desktop {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    // align-self: start;
     padding-left: 48px;
   }
 }
@@ -129,11 +128,11 @@
   padding-top: 7px;
   width: 113px;
   min-height: 40px;
+  font-family: var(--main-font);
   text-align: center;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.72px;
   border-radius: 4px;
   color: var(--color-white);
   background-color: var(--color-border-current);
