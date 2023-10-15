@@ -7,9 +7,18 @@ const paginationButttons = Array.from(document.querySelectorAll('.slider__button
 const slideCount = slides.length;
 let slideIndex = 0;
 
+function buttonClickHendler(event) {
+  const path = Number(event.target.dataset.path);
+  slideIndex = path;
+  updateSlider();
+};
+
 // Устанавливаем обработчики событий для кнопок
 prevButton.addEventListener('click', showPreviousSlide);
 nextButton.addEventListener('click', showNextSlide);
+paginationButttons.forEach((button) => {
+  button.addEventListener('click', buttonClickHendler);
+})
 
 // Функция для показа предыдущего слайда
 function showPreviousSlide() {

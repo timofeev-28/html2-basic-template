@@ -63,7 +63,7 @@
             <h2 class="visually-hidden">Наши новинки</h2>
             <div class="hero__slider-container">
               <div class="slider">
-                <div class="slider__slide">
+                <div class="slider__slide" data-target="0">
                   <div class="slider__slide-wrap">
                     <div class="slider__image-wrap">
                       <picture>
@@ -85,7 +85,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider__slide">
+                <div class="slider__slide" data-target="1">
                   <div class="slider__slide-wrap">
                     <div class="slider__image-wrap">
                       <picture>
@@ -107,7 +107,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider__slide">
+                <div class="slider__slide" data-target="2">
                   <div class="slider__slide-wrap">
                     <div class="slider__image-wrap">
                       <picture>
@@ -130,18 +130,18 @@
                   </div>
                 </div>
                 <div class="slider-pagination">
-                  <button class="slider__button-pagination btn-reset button-pagination-current" type="button">
+                  <button class="slider__button-pagination btn-reset button-pagination-current" type="button" data-path="0">
                     <span class="visually-hidden">Слайд 1</span>
                   </button>
-                  <button class="slider__button-pagination btn-reset" type="button">
+                  <button class="slider__button-pagination btn-reset" type="button"  data-path="1">
                     <span class="visually-hidden">Слайд 2</span>
                   </button>
-                  <button class="slider__button-pagination btn-reset" type="button">
+                  <button class="slider__button-pagination btn-reset" type="button" data-path="2">
                     <span class="visually-hidden">Слайд 3</span>
                   </button>
                 </div>
               </div>
-              <button class="hero__button-nav slider-button-prev btn-reset" type="button" disabled>
+              <button class="hero__button-nav slider-button-prev btn-reset" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
               <button class="hero__button-nav slider-button-next btn-reset" type="button">
