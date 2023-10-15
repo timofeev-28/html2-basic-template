@@ -32,6 +32,16 @@ function updateSlider() {
     } else {
       slide.style.display = 'none';
       paginationButttons[index].classList.remove('button-pagination-current');
+    };
+    if (slideIndex === slideCount - 1) {
+      nextButton.disabled = true;
+    } else {
+      nextButton.disabled = false;
+    };
+    if (slideIndex === 0) {
+      prevButton.disabled = true;
+    } else {
+      prevButton.disabled = false;
     }
   });
 }

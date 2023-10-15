@@ -4,4 +4,4 @@ import { initSlider } from "./noUiSlider.js";
 
 initBurger();
 updateSlider();
-initSlider();
+initSlider()

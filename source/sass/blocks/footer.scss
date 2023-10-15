@@ -69,7 +69,7 @@
   }
 }
 
-.footer__social__logo-wrap {
+.footer__social-logo-wrap {
   padding-right: 15px;
 
   @include desktop {
@@ -77,13 +77,13 @@
   }
 }
 
-.footer__social__logo-link {
+.footer__social-logo-link {
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
-.footer__social__logo-img {
+.footer__social-logo-img {
   display: block;
   object-fit: initial;
 
@@ -97,13 +97,15 @@
   }
 }
 
-.footer__social__logo-text {
+.footer__social-logo-text {
   display: none;
 
   @include desktop {
     display: inline-block;
     font-size: 14px;
     line-height: 20px;
+    text-decoration: none;
+    color: inherit;
   }
 }
 

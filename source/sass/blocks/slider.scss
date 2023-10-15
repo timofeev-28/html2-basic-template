@@ -156,7 +156,7 @@
   }
 }
 
-.slider__button-nav {
+.hero__button-nav {
   position: absolute;
   top: 108px;
   padding: 0;
@@ -205,6 +205,10 @@
   @include active {
     background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
   }
+
+  @include disabled {
+    background: var(--color-transparent);
+  }
 }
 
 .slider-button-prev {
@@ -224,7 +228,7 @@
   }
 }
 
-.slider__button-nav:disabled::before {
+.hero__button-nav:disabled::before {
   background-color: var(--color-social);
 }
 
