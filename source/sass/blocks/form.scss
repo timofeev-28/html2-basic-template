@@ -319,12 +319,14 @@
   @include focus-visible {
     &:focus-visible::before {
       --border: 2px solid var(--color-accent);
+      --bgc-color: var(--color-bgc-active);
     }
   }
 
   @include hover {
     &:hover:not(:disabled)::before {
       --border: 2px solid var(--color-accent);
+      --bgc-color: var(--color-bgc-active);
     }
   }
 

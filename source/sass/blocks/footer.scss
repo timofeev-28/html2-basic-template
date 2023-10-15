@@ -186,15 +186,15 @@
   @include not-focus;
 
   @include focus-visible {
-    color: var(--color-border-current);
+    color: var(--color-border-current, #7859cf);
   }
 
   @include any-hover {
-    color: var(--color-border-current);
+    color: var(--color-border-current, #7859cf);
   }
 
   @include active {
-    color: var(--color-active);
+    color: var(--color-active, #593cac);
   }
 
   &::after {
