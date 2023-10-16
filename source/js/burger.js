@@ -26,4 +26,4 @@ const initBurger = () => {
   closeBurger();
 };
 
-export {initBurger}
+export { initBurger }

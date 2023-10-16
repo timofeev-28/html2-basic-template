@@ -44,20 +44,31 @@
 
 .catalog__sorting {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: initial;
+    justify-content: end;
+  }
 
   @include desktop {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-    justify-content: end;
   }
 }
 
 .catalog__sorting-title {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 6px;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+  text-align: start;
+
+  @include tablet {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 
   @include desktop {
     margin-right: 20px;
@@ -66,22 +77,15 @@
 
 .catalog__sorting-select-wrap {
   position: relative;
+  display: inline-block;
+  align-self: flex-start;
   margin-bottom: 16px;
-}
-
-.catalog__sorting-arrow {
-  position: absolute;
-  top: 50%;
-  right: 7px;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 6px;
-  transition: transform 0.3s ease-in-out;
+  text-align: left;
 
   &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 8px;
     right: 0;
     width: 10px;
     height: 6px;
@@ -91,9 +95,7 @@
 }
 
 .catalog__sorting-select {
-  padding-right: 19px;
-  padding-left: 4px;
-  width: 155px;
+  padding-right: 14px;
   font-family: var(--main-font);
   font-size: 16px;
   font-weight: 600;
@@ -113,12 +115,5 @@
 
   @include hover {
     background-color: var(--bgc-active, #f0ebff);
-  }
-
-  @include active {
-    &:active + .catalog__sorting-arrow {
-      transform: rotate(180deg);
-      transform-origin: center 25%;
-    }
   }
 }

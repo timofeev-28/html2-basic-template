@@ -125,6 +125,14 @@
     }
   }
 
+  @include hover {
+    &:hover::after,
+    &:hover::before {
+      background: var(--color-border-current);
+      opacity: 0.25;
+    }
+  }
+
   @include active {
     &:active::after,
     &:active::before {
@@ -180,6 +188,8 @@
 .form__range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -moz-appearance: textfield;
 }
 
 .form__line {
